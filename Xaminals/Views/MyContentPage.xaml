@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Xaminals.Views"
+             x:Class="Xaminals.Views.MyContentPage">
+    <ContentPage.Content>
+       
+        <AbsoluteLayout>
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <Label Text="coucou"></Label>
+                <Label Text="toto"></Label>
+            </StackLayout>
+            <views:DraggableView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                 AbsoluteLayout.LayoutBounds="1,1,171,228"
+                                 BackgroundColor="Red" 
+                                 DragMode="Touch" 
+                                 DragDirection="All">
+                <StackLayout Margin="20">
+                    <Label Text="Name" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+                    <Label Text="Location" 
+                   FontAttributes="Italic" 
+                   HorizontalOptions="Center" />
+                    <Image Source="info.png" 
+                   HeightRequest="30" 
+                   WidthRequest="30" 
+                   HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </views:DraggableView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

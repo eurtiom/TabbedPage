@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:pages="http://rotorgames.com" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaminals.Views.PopUpPage"
+                  CloseWhenBackgroundIsClicked="False"
+                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:views="clr-namespace:Xaminals.Views"
+                  HasSystemPadding="False" 
+                  BackgroundColor="Transparent"
+                  HeightRequest="200"
+                  WidthRequest="200"
+                  >
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="200"
+            DurationOut="200"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <AbsoluteLayout>
+        <views:DraggableView AbsoluteLayout.LayoutFlags="PositionProportional"
+                                 AbsoluteLayout.LayoutBounds="1,1,171,228"
+                                 BackgroundColor="Red" 
+                                 DragMode="Touch" 
+                                 DragDirection="All">
+            <StackLayout Margin="20">
+                <Label Text="Name" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+                <Label Text="Location" 
+                   FontAttributes="Italic" 
+                   HorizontalOptions="Center" />
+                <Image Source="info.png" 
+                   HeightRequest="30" 
+                   WidthRequest="30" 
+                   HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </views:DraggableView>
+    </AbsoluteLayout>
+</pages:PopupPage>

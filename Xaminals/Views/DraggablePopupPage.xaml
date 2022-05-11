@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:pages="http://rotorgames.com"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Xaminals.Views"
+                  x:Class="Xaminals.Views.DraggablePopupPage"
+                  BackgroundInputTransparent="True"
+                  BackgroundColor="Transparent"
+                  CloseWhenBackgroundIsClicked="False">
+    <views:DraggableView HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="200" WidthRequest="200" BackgroundColor="AliceBlue">
+        <StackLayout>
+            <Button HeightRequest="50" WidthRequest="50" Text="Button"></Button>
+            <Entry></Entry>
+        </StackLayout>
+    </views:DraggableView>
+</pages:PopupPage>

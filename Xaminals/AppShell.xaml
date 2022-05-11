@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:controls="clr-namespace:Xaminals.Controls"
+       xmlns:sys="clr-namespace:System;assembly=netstandard"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       x:Name="shell"
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill"
+       FlyoutHeaderBehavior="CollapseOnScroll">
+
+
+    <Shell.FlyoutContentTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <CollectionView 
+                        IsGrouped="True"
+                        ItemsSource="{Binding MyFlyoutItems}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Name}"
+                           TextColor="White"
+                           FontSize="Large" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutContentTemplate>
+
+
+
+</Shell>

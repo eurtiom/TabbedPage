@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+             x:Class="Xaminals.AppShellTest">
+    <FlyoutItem Route="appletsScreen33"
+                FlyoutDisplayOptions="AsMultipleItems" >
+
+            <ShellContent Route="monkeys"
+                      IsVisible="False"
+                      Title="Monkeys"
+                      Icon="monkey.png" 
+                      ContentTemplate="{DataTemplate views:MonkeysPage}"  />
+
+            <ShellContent Route="elephants"
+                          FlyoutItemIsVisible="False"
+                      Title="Elephants"
+                      Icon="elephant.png"
+                      ContentTemplate="{DataTemplate views:ElephantsPage}"/>
+
+            <ShellContent Route="bears"
+                      Title="Bears"
+                      Icon="bear.png"
+                      ContentTemplate="{DataTemplate views:BearsPage}" />
+
+
+    </FlyoutItem>
+
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
+    <MenuItem Text="dodo"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" FlyoutItem.IsVisible="False"/>
+</Shell>
